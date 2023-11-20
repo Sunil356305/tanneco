@@ -17,7 +17,7 @@ const Home1 = () => {
       setfilterout(filterout?.data);
     };
     fetch();
-  }, []);
+  }, [filterout?.data]);
 
   return (
     <div>
