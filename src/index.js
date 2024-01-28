@@ -1,17 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { Context } from "./component/Context";
-import { reducer, intialstage } from "./component/Reducer";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { State } from './Context/State';
+import { intialstate , reducer } from './Context/Reducer';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Context intialstage={intialstage} reducer={reducer}>
+  
+
+  <State intialstate={intialstate} reducer={reducer}>
       <App />
-    </Context>
+    </State>
+  
+    
   </React.StrictMode>
 );
 
